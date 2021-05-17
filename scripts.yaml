@@ -1,0 +1,9 @@
+scripts:
+  start:
+    cmd: deno run index.ts
+    allow:
+      - read
+      - write
+  dry-run: vr start --dryRun
+  compile: deno --unstable compile --allow-read --allow-write index.ts
+
