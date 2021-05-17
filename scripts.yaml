@@ -1,9 +1,17 @@
 scripts:
   start:
-    cmd: deno run index.ts
+    cmd: deno run mod.ts
     allow:
       - read
       - write
   dry-run: vr start --dryRun
   compile: deno --unstable compile --allow-read --allow-write index.ts
+  lint:
+    cmd:
+      - deno fmt
+      - deno lint
+    unstable: true
+  test: deno test
+
+
 
